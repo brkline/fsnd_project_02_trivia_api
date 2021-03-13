@@ -27,7 +27,7 @@ class TriviaTestCase(unittest.TestCase):
         # self.database_path = "postgres://{}/{}".format('localhost:5432', self.database_name)
         setup_db(self.app, self.database_path)
         self.test_question = {
-            'question': 
+            'question':
             """
             What was the title of the 1990 fantasy directed by Tim Burton
             about a young man with multi-bladed appendages?
@@ -47,11 +47,6 @@ class TriviaTestCase(unittest.TestCase):
     def tearDown(self):
         """Executed after reach test"""
         pass
-
-    """
-    TODO
-    Write at least one test for each test for successful operation and for expected errors.
-    """
 
     def test_get_all_categories(self):
         res = self.client().get('/categories')
